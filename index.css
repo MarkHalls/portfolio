@@ -32,7 +32,8 @@ body {
   font-size: 1.25em;
 }
 
-.portfolio {
+.portfolio,
+.contact {
   display: grid;
   grid-template-areas: "a a";
   grid-gap: 2em;
@@ -41,12 +42,14 @@ body {
   justify-items: center;
 }
 
-.portfolio-header {
-  grid-column: span 2;
+.portfolio-header,
+.contact-header {
   font-size: 2em;
   align-self: center;
   justify-self: center;
+  grid-column: span 2;
 }
+
 .portfolio-img {
   height: calc((9 / 16) * 30em);
 }
