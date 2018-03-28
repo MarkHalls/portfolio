@@ -1,7 +1,7 @@
 html {
   margin: 0 auto;
   max-width: 60em;
-  min-width: 20em;
+  min-width: 30em;
 }
 
 body {
@@ -35,9 +35,9 @@ body {
 .portfolio,
 .contact {
   display: grid;
-  grid-template-areas: "a a";
   grid-gap: 2em;
-  grid-auto-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(28em, 1fr));
+  grid-template-rows: min-content;
   margin: 0 0.25em;
   justify-items: center;
 }
@@ -47,9 +47,13 @@ body {
   font-size: 2em;
   align-self: center;
   justify-self: center;
-  grid-column: span 2;
+  grid-column: 1 / -1;
 }
 
-.portfolio-img {
-  height: calc((9 / 16) * 30em);
+.portfolio-link {
+  height: calc((9 / 16) * 28em);
+}
+
+.portfolio-link-img {
+  height: 100%;
 }
